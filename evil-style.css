@@ -1,0 +1,43 @@
+html {
+    background-color: #000;
+    filter: saturate(151%);
+}
+
+header {
+    height: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes pentagram {
+    0% {color:#ca1717}
+    50% {color:#610b0b}
+    100% {color:#ca1717}
+}
+
+header a,
+#pentagram {
+    font-size: 3.5px;
+    text-decoration: none;
+    animation: pentagram;
+    animation-duration: 13s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+header a:hover {
+    filter: brightness(131%);
+}
+
+main {
+    height: 555px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#pentagram {
+    font-size: 11px;
+    margin-bottom: 13px;
+}
