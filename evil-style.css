@@ -1,5 +1,6 @@
 html {
     background-color: #000;
+    font-family: monospace;
     filter: saturate(151%);
 }
 
@@ -72,6 +73,18 @@ main {
     0% {position: relative; bottom: 11px;}
     50% {position: relative; bottom: 0px;}
     100% {position: relative; bottom: 11px;}
+}
+
+@keyframes skeleton {
+    0% {position: relative; top: 0px; font-size: 2px;}
+    50% {position: relative; top: 266px; font-size: 7px;}
+    100% {position: relative; top: 0px; font-size: 2px;}
+}
+
+@keyframes beheader {
+    0% {position: relative; top: 177px;}
+    50% {position: relative; top: 166px;}
+    100% {position: relative; top: 177px;}
 }
 
 /*@keyframes evil {
