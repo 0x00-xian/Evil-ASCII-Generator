@@ -7,17 +7,19 @@ let skeleton = document.getElementById("skeleton");
 let baphomet = document.getElementById("baphomet");
 let beheader = document.getElementById("beheader");
 let orc = document.getElementById("orc");
+let bug = document.getElementById("bug");
 
-let demons = [evil, evil, goatHead, skeleton, baphomet, beheader, orc];
+let demons = [evil, evil, goatHead, skeleton, baphomet, beheader, orc, bug];
 
-let random = Math.ceil(Math.random() * 6);
+let random = Math.ceil(Math.random() * 7);
 
 function summonDemon() {
     generator.innerHTML = demons[random].innerHTML;
     if (generator.innerHTML === evil.innerHTML || 
         generator.innerHTML === goatHead.innerHTML || 
         generator.innerHTML === baphomet.innerHTML || 
-        generator.innerHTML === orc.innerHTML) {
+        generator.innerHTML === orc.innerHTML || 
+        generator.innerHTML === bug.innerHTML) {
         generator.style.fontSize = "6px";
         generator.style.color = "#ca1717";
         generator.style.animation = "evil 1.5s linear 0s infinite";
@@ -29,7 +31,7 @@ function summonDemon() {
         generator.style.color = "#ca1717";
         generator.style.animation = "beheader 1.5s linear 0s infinite"
     }
-    random = Math.ceil(Math.random() * 6);
+    random = Math.ceil(Math.random() * 7);
 }
 
 summon.addEventListener("click", summonDemon);
