@@ -5,33 +5,58 @@ let evil = document.getElementById("evil");
 let goatHead = document.getElementById("goat-head");
 let skeleton = document.getElementById("skeleton");
 let baphomet = document.getElementById("baphomet");
-let beheader = document.getElementById("beheader");
+let warrior = document.getElementById("warrior");
 let orc = document.getElementById("orc");
-let bug = document.getElementById("bug");
+let beheader = document.getElementById("beheader");
+let gateKeeper = document.getElementById("gate-keeper");
 
-let demons = [evil, evil, goatHead, skeleton, baphomet, beheader, orc, bug];
+let demons = [evil, evil, goatHead, skeleton, baphomet, warrior, orc, beheader, gateKeeper];
 
-let random = Math.ceil(Math.random() * 7);
+let random = Math.ceil(Math.random() * 8);
 
 function summonDemon() {
     generator.innerHTML = demons[random].innerHTML;
     if (generator.innerHTML === evil.innerHTML || 
         generator.innerHTML === goatHead.innerHTML || 
         generator.innerHTML === baphomet.innerHTML || 
-        generator.innerHTML === orc.innerHTML || 
-        generator.innerHTML === bug.innerHTML) {
+        generator.innerHTML === warrior.innerHTML ||
+        generator.innerHTML === beheader.innerHTML ||
+        generator.innerHTML === gateKeeper.innerHTML) {
+        generator.style.position = "relative";
+        generator.style.left  = "0px";
+        generator.style.transform = "rotateY(0deg)";
         generator.style.fontSize = "6px";
         generator.style.color = "#ca1717";
-        generator.style.animation = "evil 1.5s linear 0s infinite";
-    } else if (generator.innerHTML === skeleton.innerHTML) {
+        generator.style.animation = "hover 1.5s linear 0s infinite";
+        if (generator.innerHTML === evil.innerHTML) {
+            generator.style.animation = "evil 6s ease-in-out 0s infinite";
+        } else if (generator.innerHTML === baphomet.innerHTML) {
+            generator.style.animation = "baphomet 1.5s linear 0s 1, hover 1.5s linear 1.5s infinite";
+        } else if (generator.innerHTML === warrior.innerHTML) {
+            generator.style.animation = "warrior 1.2s linear 0s infinite";
+        } else if (generator.innerHTML === beheader.innerHTML) {
+            generator.style.animation = "beheader 1.5s linear 0s infinite";
+        } else if (generator.innerHTML === gateKeeper.innerHTML) {
+            generator.style.fontSize = "7.5px";
+            generator.style.animation = "beheader 1.5s linear 0s infinite";
+        }
+    } else if (generator.innerHTML === skeleton.innerHTML ||
+               generator.innerHTML === orc.innerHTML) {
+        generator.style.position = "relative";
+        generator.style.left  = "0px";
+        generator.style.transform = "rotateY(0deg)";
+        generator.style.fontSize = "9px";
         generator.style.color = "#008000";
-        generator.style.animation = "skeleton 3s linear 0s infinite";
-    } else if (generator.innerHTML === beheader.innerHTML) {
-        generator.style.fontSize = "6px";
-        generator.style.color = "#ca1717";
-        generator.style.animation = "beheader 1.5s linear 0s infinite"
+        if (generator.innerHTML === skeleton.innerHTML) {
+            generator.style.animation = "skeleton 3s linear 0s infinite";
+        } else if (generator.innerHTML === orc.innerHTML) {
+            generator.style.animation = "hover 1.5s linear 0s infinite";
+            generator.style.transform = "rotateY(180deg)";
+            generator.style.position = "relative";
+            generator.style.left  = "11px";
+        }
     }
-    random = Math.ceil(Math.random() * 7);
+    random = Math.ceil(Math.random() * 8);
 }
 
 summon.addEventListener("click", summonDemon);
