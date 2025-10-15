@@ -109,3 +109,27 @@ main {
     50% {position: relative; top: 266px; font-size: 7px;}
     100% {position: relative; top: 0px; font-size: 2px;}
 }
+
+@keyframes jigsaw {
+    0% {position: relative; top: 0px; font-size: 2px;}
+    50% {position: relative; top: 200px; font-size: 5px;}
+    100% {position: relative; top: 0px; font-size: 2px;}
+}
+
+@keyframes dragon {
+    0% {position: relative; top: 44px; color: #ca1717}
+    50% {position: relative; top: 33px; color: #610b0b}
+    100% {position: relative; top: 44px; color: #ca1717}
+}
+
+@keyframes witches-brew {
+    0% {position: relative; top: 199px;}
+    50% {position: relative; top: 188px;}
+    100% {position: relative; top: 199px;}
+}
+
+@keyframes shadow {
+    0% {position: relative; top: 0px; font-size: 1px;}
+    50% {position: relative; top: 255px; font-size: 5px;}
+    100% {position: relative; top: 0px; font-size: 1px;}
+}
