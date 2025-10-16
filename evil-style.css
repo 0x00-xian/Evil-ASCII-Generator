@@ -87,6 +87,23 @@ main {
     100% {position: relative; bottom: 0px; left: 0px; transform: rotate(0deg); font-size: 6px;}
 }
 
+@keyframes enter-hidden {
+    0% {position: relative; top: 177px; transform: rotateX(180deg);}
+    100% {position: relative; top: 177px; transform: rotateX(0deg);}
+}
+
+@keyframes hidden {
+    0% {position: relative; top: 177px;}
+    50% {position: relative; top: 166px;}
+    100% {position: relative; top: 177px;}
+}
+
+@keyframes gate-keeper {
+    0% {position: relative; top: 277px;}
+    50% {position: relative; top: 266px;}
+    100% {position: relative; top: 277px;}
+}
+
 @keyframes baphomet {
     0% {position: relative; top: 199px; transform: rotateX(180deg);}
     100% {position: relative; top: 11px; transform: rotateX(0deg);}
@@ -96,12 +113,6 @@ main {
     0% {position: relative; top: 222px;}
     50% {position: relative; top: 144px;}
     100% {position: relative; top: 222px;}
-}
-
-@keyframes beheader {
-    0% {position: relative; top: 277px;}
-    50% {position: relative; top: 266px;}
-    100% {position: relative; top: 277px;}
 }
 
 @keyframes skeleton {
