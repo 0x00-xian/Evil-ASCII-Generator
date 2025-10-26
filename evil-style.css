@@ -122,6 +122,14 @@ main {
     100% {position: relative; top: 222px;}
 }
 
+@keyframes paranoid {
+    0% {position: relative; top: 11px; color:#ca1717;}
+    25% {position: relative; top: 16px; color:#ee82ee;}
+    50% {position: relative; top: 22px; color:#008000;}
+    75% {position: relative; top: 26px; color:#ee82ee;}
+    100% {position: relative; top: 11px; color:#ca1717;}
+}
+
 @keyframes eat {
     0% {position: relative; top: 366px; font-size: 8px;}
     50% {position: relative; top: 366px; font-size: 8.4px;}
