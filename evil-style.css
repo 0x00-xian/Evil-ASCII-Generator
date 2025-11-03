@@ -93,10 +93,16 @@ main {
     100% {position: relative; top: 0px; font-size: 2px;}
 }
 
-@keyframes psycho {
-    0% {position: relative; top: 277px;}
-    50% {position: relative; top: 266px;}
-    100% {position: relative; top: 277px;}
+@keyframes imp {
+    0% {position: relative; top: 11px; left: 0px; transform: rotateY(180deg); font-size: 7px;}
+    12.5% {position: relative; top: 66px; left: 166px; transform: rotateY(180deg); font-size: 8px;}
+    25% {position: relative; top: 132px; left: 0px; transform: rotateY(0deg); font-size: 9px;}
+    37.5% {position: relative; top: 166px; left: -166px; transform: rotateY(0deg); font-size: 10px;}
+    50% {position: relative; top: 199px; left: 0px; transform: rotateY(180deg); font-size: 11px;}
+    62.5% {position: relative; top: 0px; left: 0px; transform: rotateY(180deg); font-size: 7px;}
+    75% {position: relative; top: 11px; left: 0px; transform: rotateY(180deg); font-size: 7px;}
+    87.5% {position: relative; top: 0px; left: 0px; transform: rotateY(180deg); font-size: 7px;}
+    100% {position: relative; top: 11px; left: 0px; transform: rotateY(180deg); font-size: 7px;}
 }
 
 @keyframes baphomet {
@@ -109,11 +115,11 @@ main {
     12.5% {position: relative; top: 66px; left: -166px; transform: rotateY(0deg); font-size: 7px;}
     25% {position: relative; top: 132px; left: 0px; transform: rotateY(180deg); font-size: 8px;}
     37.5% {position: relative; top: 166px; left: 166px; transform: rotateY(180deg); font-size: 9px;}
-    50% {position: relative; top: 199px; left: 0px; transform: rotate(0deg); font-size: 10px;}
-    62.5% {position: relative; top: 33px; left: 0px; transform: rotate(0deg); font-size: 6px;}
-    75% {position: relative; top: 44px; left: 0px; transform: rotate(0deg); font-size: 6px;}
-    87.5% {position: relative; top: 33px; left: 0px; transform: rotate(0deg); font-size: 6px;}
-    100% {position: relative; top: 44px; left: 0px; transform: rotate(0deg); font-size: 6px;}
+    50% {position: relative; top: 199px; left: 0px; transform: rotateY(0deg); font-size: 10px;}
+    62.5% {position: relative; top: 33px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    75% {position: relative; top: 44px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    87.5% {position: relative; top: 33px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    100% {position: relative; top: 44px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
 }
 
 @keyframes warrior {
@@ -122,47 +128,65 @@ main {
     100% {position: relative; top: 222px;}
 }
 
-@keyframes paranoid {
-    0% {position: relative; top: 11px; color:#ca1717;}
-    25% {position: relative; top: 16px; color:#ee82ee;}
-    50% {position: relative; top: 22px; color:#008000;}
-    75% {position: relative; top: 26px; color:#ee82ee;}
-    100% {position: relative; top: 11px; color:#ca1717;}
+@keyframes beheader {
+    0% {position: relative; top: 277px;}
+    50% {position: relative; top: 266px;}
+    100% {position: relative; top: 277px;}
 }
 
-@keyframes eat {
+@keyframes paranoia {
+    0% {position: relative; top: 101px; color:#ca1717;}
+    25% {position: relative; top: 106px; color:#ee82ee;}
+    50% {position: relative; top: 112px; color:#008000;}
+    75% {position: relative; top: 116px; color:#ee82ee;}
+    100% {position: relative; top: 101px; color:#ca1717;}
+}
+
+@keyframes burning-skull {
+    0% {position: relative; top: 33px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    12.5% {position: relative; top: 66px; left: 166px; transform: rotateY(0deg); font-size: 7px;}
+    25% {position: relative; top: 132px; left: 0px; transform: rotateY(180deg); font-size: 8px;}
+    37.5% {position: relative; top: 166px; left: -166px; transform: rotateY(180deg); font-size: 9px;}
+    50% {position: relative; top: 199px; left: 0px; transform: rotateY(0deg); font-size: 10px;}
+    62.5% {position: relative; top: 33px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    75% {position: relative; top: 44px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    87.5% {position: relative; top: 33px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+    100% {position: relative; top: 44px; left: 0px; transform: rotateY(0deg); font-size: 6px;}
+}
+
+@keyframes zombie {
+    0% {position: relative; top: 177px;}
+    50% {position: relative; top: 166px;}
+    100% {position: relative; top: 177px;}
+}
+
+@keyframes fat {
     0% {position: relative; top: 366px; font-size: 8px;}
     50% {position: relative; top: 366px; font-size: 8.4px;}
     100% {position: relative; top: 366px; font-size: 8px;}
 }
 
-@keyframes brains {
+@keyframes eat {
+    0% {position: relative; top: 366px; font-size: 7.5px;}
+    50% {position: relative; top: 366px; font-size: 7.6px;}
+    100% {position: relative; top: 366px; font-size: 7.5px;}
+}
+
+@keyframes brain {
     0% {position: relative; top: 200px; font-size: 6px;}
     50% {position: relative; top: 0px; font-size: 2px;}
     100% {position: relative; top: 200px; font-size: 6px;}
 }
 
-@keyframes enter-hidden {
+@keyframes hidden {
     0% {position: relative; top: 177px; transform: rotateX(180deg);}
     100% {position: relative; top: 177px; transform: rotateX(0deg);}
-}
-
-@keyframes hidden {
-    0% {position: relative; top: 177px;}
-    50% {position: relative; top: 166px;}
-    100% {position: relative; top: 177px;}
 }
 
 @keyframes jigsaw {
     0% {position: relative; top: 0px; font-size: 2px;}
     50% {position: relative; top: 200px; font-size: 5px;}
     100% {position: relative; top: 0px; font-size: 2px;}
-}
-
-@keyframes test {
-    0% {position: relative; top: 44px; color: #ca1717}
-    50% {position: relative; top: 33px; color: #610b0b}
-    100% {position: relative; top: 44px; color: #ca1717}
 }
 
 @keyframes witches-brew {
