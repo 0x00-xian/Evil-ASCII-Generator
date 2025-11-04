@@ -61,7 +61,6 @@ main {
 }
 
 #generator {
-    font-size: 1.9px;
     transition: all 1.9s linear 0.1s;
 }
 
@@ -172,21 +171,21 @@ main {
     100% {position: relative; top: 366px; font-size: 7.5px;}
 }
 
-@keyframes brain {
+@keyframes brains {
     0% {position: relative; top: 200px; font-size: 6px;}
     50% {position: relative; top: 0px; font-size: 2px;}
     100% {position: relative; top: 200px; font-size: 6px;}
-}
-
-@keyframes hidden {
-    0% {position: relative; top: 177px; transform: rotateX(180deg);}
-    100% {position: relative; top: 177px; transform: rotateX(0deg);}
 }
 
 @keyframes jigsaw {
     0% {position: relative; top: 0px; font-size: 2px;}
     50% {position: relative; top: 200px; font-size: 5px;}
     100% {position: relative; top: 0px; font-size: 2px;}
+}
+
+@keyframes hidden {
+    0% {position: relative; top: 177px; transform: rotateX(180deg);}
+    100% {position: relative; top: 177px; transform: rotateX(0deg);}
 }
 
 @keyframes witches-brew {

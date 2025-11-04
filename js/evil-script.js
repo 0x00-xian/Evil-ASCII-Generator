@@ -18,37 +18,41 @@ let paranoid = document.getElementById("paranoid");
 let psycho = document.getElementById("psycho");
 let burningSkull = document.getElementById("burning-skull");
 let troll = document.getElementById("troll");
-let electric = document.getElementById("electric");
+let electricGuitar = document.getElementById("electric-guitar");
 let zombie = document.getElementById("zombie");
 let fatso = document.getElementById("fatso");
 let eat = document.getElementById("eat");
 let slut = document.getElementById("slut");
-let brain = document.getElementById("brain");
+let brains = document.getElementById("brains");
 let fuck = document.getElementById("fuck");
+let dungeon = document.getElementById("dungeon");
+let slave = document.getElementById("slave");
+let suck = document.getElementById("suck");
+let jigsaw = document.getElementById("jigsaw");
+let jesus = document.getElementById("jesus");
 let gateKeeper = document.getElementById("gate-keeper");
 let hidden = document.getElementById("hidden");
 let bitcoin = document.getElementById("bitcoin");
 let spaceInvader = document.getElementById("space-invader");
 let bug = document.getElementById("bug");
 let shadowMan = document.getElementById("shadow-man");
-let jigsaw = document.getElementById("jigsaw");
 let witchesBrew = document.getElementById("witches-brew");
 
 let demons = [evil, evil, goatHead, skeleton, imp, pyro,
               baphomet, dragon, warrior, orc, beheader, doom,
               devil, weed, paranoid, psycho, burningSkull, troll,
-              electric, zombie, fatso, eat, slut, brain,
-              fuck, dungeon,
+              electricGuitar, zombie, fatso, eat, slut, brains,
+              fuck, dungeon, slave, suck, jigsaw, jesus,
               hidden, bitcoin, gateKeeper, 
-              spaceInvader, bug, shadowMan, jigsaw, witchesBrew];
+              spaceInvader, bug, shadowMan, witchesBrew];
 
-let random = Math.ceil(Math.random() * 33);
+let random = Math.ceil(Math.random() * 36);
 
 function summonDemon() {
     generator.innerHTML = demons[random].innerHTML;
     generator.style.position = "relative";
     generator.style.left  = "0px";
-    generator.style.transform = "rotateY(0deg)";
+    generator.style.transform = "rotate(0deg)";
     generator.style.fontSize = "6px";
     generator.style.color = "#ca1717";
     generator.style.filter = "saturate(100%)";
@@ -86,45 +90,65 @@ function summonDemon() {
     } else if (generator.innerHTML === beheader.innerHTML ||
                generator.innerHTML === devil.innerHTML ||
                generator.innerHTML === psycho.innerHTML ||
-               generator.innerHTML === electric.innerHTML ||
-               generator.innerHTML === slut.innerHTML ||
+               generator.innerHTML === electricGuitar.innerHTML ||
                generator.innerHTML === fuck.innerHTML ||
+               generator.innerHTML === dungeon.innerHTML ||
+               generator.innerHTML === suck.innerHTML ||
+               generator.innerHTML === jesus.innerHTML ||
                generator.innerHTML === gateKeeper.innerHTML) {
+        generator.style.animation = "beheader 1.5s linear 0s infinite";
         if (generator.innerHTML === psycho.innerHTML ||
             generator.innerHTML === gateKeeper.innerHTML) {
             generator.style.fontSize = "7.5px";
-        } else if (generator.innerHTML === electric.innerHTML) {
+        } else if (generator.innerHTML === electricGuitar.innerHTML) {
             generator.style.fontSize = "5px";
-        } else if (generator.innerHTML === slut.innerHTML) {
+        } else if (generator.innerHTML === fuck.innerHTML) {
+            generator.style.fontSize = "9px";
+            generator.style.transform = "rotateY(180deg)";
+            generator.style.animation = "beheader 0.6s linear 0s infinite";
+        } else if (generator.innerHTML === dungeon.innerHTML || 
+                   generator.innerHTML === jesus.innerHTML) {
+            generator.style.fontSize = "7px";
+            generator.style.transform = "rotate(-180deg)";
+        } else if (generator.innerHTML === suck.innerHTML) {
             generator.style.fontSize = "6.6px";
         }
-        generator.style.animation = "beheader 1.5s linear 0s infinite";
     } else if (generator.innerHTML === paranoid.innerHTML) {
         generator.style.animation = "paranoia 1.5s linear 0s infinite";
     } else if (generator.innerHTML === burningSkull.innerHTML) {
         generator.style.animation = "pentagram 1.65s linear 0s infinite reverse, burning-skull 6.6s linear 0s infinite";
-    } else if (generator.innerHTML === zombie.innerHTML) {
+    } else if (generator.innerHTML === zombie.innerHTML ||
+               generator.innerHTML === slave.innerHTML) {
         generator.style.fontSize = "15px";
         generator.style.animation = "zombie 1.5s linear 0s infinite";
+        if (generator.innerHTML === slave.innerHTML) {
+            generator.style.fontSize = "9px";
+        }
+    } else if (generator.innerHTML === slut.innerHTML ||
+               generator.innerHTML === witchesBrew.innerHTML) {
+        generator.style.fontSize = "11px";
+        generator.style.animation = "witches-brew 1.5s linear 0s infinite";
+        if (generator.innerHTML === slut.innerHTML) {
+            generator.style.position = "relative";
+            generator.style.left  = "-11px";
+            generator.style.fontSize = "10px";
+        }
     } else if (generator.innerHTML === fatso.innerHTML) {
         generator.style.animation = "fat 1.5s linear 0s infinite";
     } else if (generator.innerHTML === eat.innerHTML) {
-        generator.style.animation = "eat 1.5s linear 0s infinite";
-    } else if (generator.innerHTML === brain.innerHTML) {
+        generator.style.animation = "eat 1.1s linear 0s infinite";
+    } else if (generator.innerHTML === brains.innerHTML) {
         generator.style.color = "#ee82ee";
-        generator.style.animation = "brain 5s linear 0s infinite";
+        generator.style.animation = "brains 5s linear 0s infinite";
     } else if (generator.innerHTML === hidden.innerHTML) {
         generator.style.fontSize = "10px";
         generator.style.animation = "hidden 1.5s linear 0s 1, zombie 1.5s ease-in-out 1.5s infinite";
     } else if (generator.innerHTML === jigsaw.innerHTML) {
         generator.style.animation = "jigsaw 3s linear 0s infinite";
-    } else if (generator.innerHTML === witchesBrew.innerHTML) {
-        generator.style.fontSize = "11px";
-        generator.style.animation = "witches-brew 1.5s linear 0s infinite";
     } else if (generator.innerHTML === bitcoin.innerHTML) {
         generator.style.color = "#ffa500";
     }
-    random = Math.ceil(Math.random() * 33);
+    random = Math.ceil(Math.random() * 36);
 }
 
 summon.addEventListener("click", summonDemon);
