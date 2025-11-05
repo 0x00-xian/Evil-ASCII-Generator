@@ -183,6 +183,11 @@ main {
     100% {position: relative; top: 0px; font-size: 2px;}
 }
 
+@keyframes ghost {
+    0% {position: relative; top: 99px; font-size: 2px;}
+    100% {position: relative; top: 255px; font-size: 15px;}
+}
+
 @keyframes hidden {
     0% {position: relative; top: 177px; transform: rotateX(180deg);}
     100% {position: relative; top: 177px; transform: rotateX(0deg);}
